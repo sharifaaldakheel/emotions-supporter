@@ -1,7 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: "IBM Plex Sans Arabic";
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  direction: rtl;
 }
 
 /* intensity slider: pink → orange → green → blue, solid #45485C thumb */
@@ -13,5 +14,21 @@ body {
   outline: none;
   background: linear-gradient(270deg, #F4B8C8, #F5C86A, #B8DDD1, #A8C8E8);
 }
-.rng::-webkit-slider-thumb { /* the draggable circle */ ... }
-.rng::-moz-range-thumb { ... }
+.rng::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #45485C;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
+.rng::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #45485C;
+  cursor: pointer;
+  border: 3px solid #fff;
+}
